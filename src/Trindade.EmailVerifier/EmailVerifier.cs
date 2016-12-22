@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Trindade.EmailVerifier.Rules;
 
 namespace Trindade.EmailVerifier
 {
@@ -26,8 +27,7 @@ namespace Trindade.EmailVerifier
 
         public bool IsValid(string email)
         {
-            if (!rules.Any())
-                throw new Exception("None rules found");
+            if (!rules.Any()) throw new RuleNotFoundException();
 
             bool result = rules.All(rule => rule.IsValid(email));
 

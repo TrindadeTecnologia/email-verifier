@@ -52,9 +52,10 @@
     <Compile Include="Constants.cs" />
     <Compile Include="EmailVerifier.cs" />
     <Compile Include="IEmailRule.cs" />
-    <Compile Include="MxRule.cs" />
+    <Compile Include="Rules\MxRule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegexRule.cs" />
+    <Compile Include="Rules\RegexRule.cs" />
+    <Compile Include="RuleNotFoundException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -3,7 +3,7 @@ using System.Linq;
 using ARSoft.Tools.Net.Dns;
 using System;
 
-namespace Trindade.EmailVerifier
+namespace Trindade.EmailVerifier.Rules
 {
     public sealed class MxRule: IEmailRule
     {

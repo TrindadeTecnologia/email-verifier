@@ -1,4 +1,4 @@
-﻿namespace Trindade.EmailVerifier
+﻿namespace Trindade.EmailVerifier.Rules
 {
     public class RegexRule : IEmailRule
     {
