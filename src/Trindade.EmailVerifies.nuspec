@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Trindade.EmailVerifier</id>
+    <version>$version$</version>
+    <title>Email Verifier</title>
+    <authors>Trindade Tecnologia, Paulo Silva</authors>
+    <owners>Trindade Tecnologia</owners>
+    <projectUrl>https://github.com/TrindadeTecnologia/email-verifier</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Serviço verificador de endereços de e-mail.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright &#x00A9; Trindade Tecnologia.  All rights reserved.</copyright>
+    <tags>email validation</tags>
+  </metadata>
+  <files>
+	<file src="Trindade.EmailVerifier\bin\$configuration$\Trindade.EmailVerifier.dll" target="lib\net45\" />
+  </files>
+</package>
