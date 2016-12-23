@@ -13,7 +13,7 @@ var emailVerifier = new EmailVerifier();
 
 // Adicionando regras default:
 
-emailVerifier.AddRule(new DefautlRule());
+emailVerifier.AddRule(new DefaultRule());
 emailVerifier.AddRule(new MxRule());
 emailVerifier.AddRule(new RegexRule("Regex"));
 
