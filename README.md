@@ -14,7 +14,7 @@ var emailVerifier = new EmailVerifier();
 
 emailVerifier.AddRule(new DefautlRule());
 emailVerifier.AddRule(new MxRule());
-emailVerifier.AddRule(new RegexRule("Regex");
+emailVerifier.AddRule(new RegexRule("Regex"));
 
 string emailToBeValidated = "paulofoliveira@outlook.com";
 
