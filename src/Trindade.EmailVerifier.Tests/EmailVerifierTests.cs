@@ -41,7 +41,7 @@ namespace Trindade.EmailVerifier.Tests
             {
                 // Arrange:
 
-                _sut.AddRule(new RegexRule());
+                _sut.AddRule(new SintaxRule());
 
                 // Act:
 

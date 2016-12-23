@@ -1,10 +1,24 @@
-﻿namespace Trindade.EmailVerifier.Rules
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+
+namespace Trindade.EmailVerifier.Rules
 {
     public class RegexRule : IEmailRule
     {
+        public string Regex { get; private set; }
+
+        public RegexRule(string regex)
+        {
+            Regex = regex;
+        }
+
         public bool IsValid(string email)
         {
-            return Constants.EmailAddressValidator.IsValid(email);
+            return new Regex(Regex).IsMatch(email);
         }
     }
 }

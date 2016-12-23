@@ -7,7 +7,7 @@ namespace Trindade.EmailVerifier
 {
     public static class DefaultRules
     {
-        public static RegexRule RegexRule = new RegexRule();
+        public static SintaxRule RegexRule = new SintaxRule();
         public static MxRule MxRule = new MxRule();
     }
 

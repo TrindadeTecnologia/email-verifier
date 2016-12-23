@@ -55,6 +55,7 @@
     <Compile Include="Rules\MxRule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\RegexRule.cs" />
+    <Compile Include="Rules\SintaxRule.cs" />
     <Compile Include="RuleNotFoundException.cs" />
   </ItemGroup>
   <ItemGroup>
