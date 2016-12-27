@@ -15,7 +15,7 @@ if "%nuget%" == "" (
 	set nuget=nuget
 )
 
-Restore Packages
+REM Restore Packages
 %nuget% restore Trindade.Caching.sln
 
 REM Build
