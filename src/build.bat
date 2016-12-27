@@ -15,6 +15,10 @@ if "%nuget%" == "" (
 	set nuget=nuget
 )
 
+Restore Packages
+%nuget% restore Trindade.Caching.sln
+
+REM Build
 %WINDIR%\Microsoft.NET\Framework\v4.0.30319\msbuild src\Trindade.EmailVerifier.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=diag /nr:false
 
 mkdir Build
