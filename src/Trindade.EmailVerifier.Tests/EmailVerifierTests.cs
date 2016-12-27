@@ -1,8 +1,10 @@
 ﻿using NUnit.Framework;
+using System.Threading.Tasks;
 using Trindade.EmailVerifier.Rules;
+using Trindade.EmailVerifier.Services;
 
 namespace Trindade.EmailVerifier.Tests
-{    
+{
     public class EmailVerifierTests
     {
 
@@ -16,7 +18,7 @@ namespace Trindade.EmailVerifier.Tests
             {
                 _sut = new EmailVerifier();
             }
-            
+
             [Test]
             [TestCase("paulofoliveira@outlook.com")]
             public void MustThrowRuleNotFoundExceptionTheExecuteWithoutRules(string email)
@@ -66,6 +68,40 @@ namespace Trindade.EmailVerifier.Tests
                 // Act:
 
                 var valid = _sut.IsValid(email);
+
+                // Assert:
+
+                Assert.AreEqual(true, valid);
+            }
+
+            [Test]
+            [TestCase("paulofoliveira@outlook.com")]
+            public async Task MustValidEmailsOnlyWithMailboxLayer(string email)
+            {
+                // Arrange:               
+
+                _sut.AddRule(new MailboxLayerServiceRule("access key here"));
+
+                // Act:
+
+                bool valid = await _sut.IsValidAsync(email);
+
+                // Assert:
+
+                Assert.AreEqual(true, valid);
+            }
+
+            [Test]
+            [TestCase("paulo.silva@trindadetecnologia.com.br")]
+            public async Task MustValidEmailsOnlyWithEmailValidator(string email)
+            {
+                // Arrange:               
+
+                _sut.AddRule(new EmailValidatorServiceRule("access key here"));
+
+                // Act:
+
+                bool valid = await _sut.IsValidAsync(email);
 
                 // Assert:
 

@@ -20,5 +20,10 @@ namespace Trindade.EmailVerifier.Rules
         {
             return new Regex(Regex).IsMatch(email);
         }
+
+        public Task<bool> IsValidAsync(string email)
+        {
+            return Task.FromResult<bool>(new Regex(Regex).IsMatch(email));
+        }
     }
 }
