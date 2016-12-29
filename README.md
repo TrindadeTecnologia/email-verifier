@@ -24,4 +24,4 @@ Console.WriteLine($"Resultado = { result }");
 
 ```
 
-http://trindade-ci.eastus.cloudapp.azure.com:8080/job/EmailVerifier/badge/icon
+<img src="http://trindade-ci.eastus.cloudapp.azure.com:8080/job/EmailVerifier/badge/icon" />
