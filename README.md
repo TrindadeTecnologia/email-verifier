@@ -23,3 +23,5 @@ bool result = emailVerified.IsValid(emailToBeValidated);
 Console.WriteLine($"Resultado = { result }");
 
 ```
+
+<img src="http://trindade-ci.eastus.cloudapp.azure.com:8080/job/EmailVerifier/badge/icon" />
