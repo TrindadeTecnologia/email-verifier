@@ -74,39 +74,39 @@ namespace Trindade.EmailVerifier.Tests
                 Assert.AreEqual(true, valid);
             }
 
-            [Test]
-            [TestCase("paulofoliveira@outlook.com")]
-            public async Task MustValidEmailsOnlyWithMailboxLayer(string email)
-            {
-                // Arrange:               
+            //[Test]
+            //[TestCase("paulofoliveira@outlook.com")]
+            //public async Task MustValidEmailsOnlyWithMailboxLayer(string email)
+            //{
+            //    // Arrange:               
 
-                _sut.AddRule(new MailboxLayerServiceRule("access key here"));
+            //    _sut.AddRule(new MailboxLayerServiceRule("access key here"));
 
-                // Act:
+            //    // Act:
 
-                bool valid = await _sut.IsValidAsync(email);
+            //    bool valid = await _sut.IsValidAsync(email);
 
-                // Assert:
+            //    // Assert:
 
-                Assert.AreEqual(true, valid);
-            }
+            //    Assert.AreEqual(true, valid);
+            //}
 
-            [Test]
-            [TestCase("paulo.silva@trindadetecnologia.com.br")]
-            public async Task MustValidEmailsOnlyWithEmailValidator(string email)
-            {
-                // Arrange:               
+            //[Test]
+            //[TestCase("paulo.silva@trindadetecnologia.com.br")]
+            //public async Task MustValidEmailsOnlyWithEmailValidator(string email)
+            //{
+            //    // Arrange:               
 
-                _sut.AddRule(new EmailValidatorServiceRule("access key here"));
+            //    _sut.AddRule(new EmailValidatorServiceRule("access key here"));
 
-                // Act:
+            //    // Act:
 
-                bool valid = await _sut.IsValidAsync(email);
+            //    bool valid = await _sut.IsValidAsync(email);
 
-                // Assert:
+            //    // Assert:
 
-                Assert.AreEqual(true, valid);
-            }
+            //    Assert.AreEqual(true, valid);
+            //}
         }
 
     }
