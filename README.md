@@ -1,4 +1,4 @@
-# Trindade.EmailVerifier6
+# Trindade.EmailVerifier7
 
 Verificador de e-mails criado para validar endereços de e-mail a partir de regras pré definidas.
 O projeto hoje conta com duas regras para validação:
