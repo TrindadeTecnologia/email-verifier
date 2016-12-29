@@ -32,7 +32,7 @@ namespace Trindade.EmailVerifier.Tests
                 // Assert:
 
                 Assert.IsInstanceOf<RuleNotFoundException>(ex);
-                Assert.AreEqual("Rules not foundx.", ex.Message);
+                Assert.AreEqual("Rules not found.", ex.Message);
             }
 
             [Test]
