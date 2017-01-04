@@ -8,12 +8,12 @@
     <owners>Trindade Tecnologia</owners>
     <projectUrl>https://github.com/TrindadeTecnologia/email-verifier</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Serviço verificador de endereços de e-mail.</description>
+    <description>ServiÃ§o verificador de endereÃ§os de e-mail.</description>
     <releaseNotes></releaseNotes>
     <copyright>Copyright &#x00A9; Trindade Tecnologia.  All rights reserved.</copyright>
     <tags>email validation</tags>
   </metadata>
   <files>
-	<file src="Trindade.EmailVerifier\bin\$configuration$\Trindade.EmailVerifier.dll" target="lib\net45\" />
+	<file src="Trindade.EmailVerifier\bin\$configuration$\Trindade.EmailVerifier.dll" target="lib\net45" />
   </files>
 </package>
