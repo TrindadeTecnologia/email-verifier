@@ -1,4 +1,4 @@
-# Trindade.EmailVerifier12345678
+# Trindade.EmailVerifier
 
 Verificador de e-mails criado para validar endereços de e-mail a partir de regras pré definidas.
 O projeto hoje conta com duas regras para validação:
@@ -24,4 +24,4 @@ Console.WriteLine($"Resultado = { result }");
 
 ```
 
-<img src="http://trindade-ci.eastus.cloudapp.azure.com:8080/job/EmailVerifier/badge/icon" />
+<img src="http://177.139.164.184:8000/job/Trindade.EmailVerifier/badge/icon" />
