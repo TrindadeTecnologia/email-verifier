@@ -1,5 +1,7 @@
 # Trindade.EmailVerifier
 
+<img src="http://177.139.164.184:8000/job/Trindade.EmailVerifier/badge/icon" />
+
 Verificador de e-mails criado para validar endereços de e-mail a partir de regras pré definidas.
 O projeto hoje conta com duas regras para validação:
 - Usando EmailAddressAttribute do System.ComponentModel.DataAnnotations para validação de sintaxe que indica que a string informada possui ao menos um formato de e-mail valido, que seja pelo menos a@b.com
@@ -23,5 +25,3 @@ bool result = emailVerified.IsValid(emailToBeValidated);
 Console.WriteLine($"Resultado = { result }");
 
 ```
-
-<img src="http://177.139.164.184:8000/job/Trindade.EmailVerifier/badge/icon" />
