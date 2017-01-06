@@ -18,8 +18,7 @@ namespace Trindade.EmailVerifier.Tests
             //    _sut = new EmailVerifier();
             //}
 
-            [Theory]
-            [InlineData("123paulofoliveiraoutlook.com")]
+            [Fact]
             public void MustThrowRuleNotFoundExceptionTheExecuteWithoutRules(string email)
             {
                 // Arrange:
@@ -35,7 +34,7 @@ namespace Trindade.EmailVerifier.Tests
             }
 
             [Theory]
-            [InlineData("ab.com")]
+            [InlineData("a@b.com")]
             [InlineData("test@xpto.com.br")]
             [InlineData("paulofoliveira@outlook.com")]
             public void MustValidEmailsOnlyWithRegexRule(string email)
