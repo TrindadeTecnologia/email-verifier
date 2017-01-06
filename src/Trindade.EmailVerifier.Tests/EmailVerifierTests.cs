@@ -35,7 +35,7 @@ namespace Trindade.EmailVerifier.Tests
             }
 
             [Theory]
-            [InlineData("a@b.com")]
+            [InlineData("ab.com")]
             [InlineData("test@xpto.com.br")]
             [InlineData("paulofoliveira@outlook.com")]
             public void MustValidEmailsOnlyWithRegexRule(string email)
