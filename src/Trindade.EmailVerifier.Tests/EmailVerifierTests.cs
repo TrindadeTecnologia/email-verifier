@@ -1,7 +1,6 @@
 ﻿//using NUnit.Framework;
 using System.Threading.Tasks;
 using Trindade.EmailVerifier.Rules;
-using Trindade.EmailVerifier.Services;
 using Xunit;
 
 namespace Trindade.EmailVerifier.Tests
@@ -68,40 +67,6 @@ namespace Trindade.EmailVerifier.Tests
                 // Act:
 
                 var valid = _sut.IsValid(email);
-
-                // Assert:
-
-                Assert.Equal(true, valid);
-            }
-
-            [Theory]
-            [InlineData("paulofoliveira@outlook.com")]
-            public async Task MustValidEmailsOnlyWithMailboxLayer(string email)
-            {
-                // Arrange:
-
-                _sut.AddRule(new MailboxLayerServiceRule("access key here"));
-
-                // Act:
-
-                bool valid = await _sut.IsValidAsync(email);
-
-                // Assert:
-
-                Assert.Equal(true, valid);
-            }
-
-            [Theory]
-            [InlineData("paulo.silva@trindadetecnologia.com.br")]
-            public async Task MustValidEmailsOnlyWithEmailValidator(string email)
-            {
-                // Arrange:
-
-                _sut.AddRule(new EmailValidatorServiceRule("access key here"));
-
-                // Act:
-
-                bool valid = await _sut.IsValidAsync(email);
 
                 // Assert:
 
