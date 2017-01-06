@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<assemblies>
+  <assembly name="C:\Workspace\email-verifier\src\Trindade.EmailVerifier.Tests\bin\Debug\Trindade.EmailVerifier.Tests.DLL" environment="64-bit .NET 4.0.30319.42000 [collection-per-class, parallel (8 threads)]" test-framework="xUnit.net 2.1.0.3179" run-date="2017-01-06" run-time="14:22:53" config-file="C:\Workspace\email-verifier\src\packages\xunit.runner.console.2.1.0\tools\xunit.console.exe.Config" total="4" passed="4" failed="0" skipped="0" time="0.623" errors="0">
+    <errors />
+    <collection total="4" passed="4" failed="0" skipped="0" name="Test collection for Trindade.EmailVerifier.Tests.EmailVerifierTests+WhenCreateAnEmailVerifier" time="0.496">
+      <test name="Trindade.EmailVerifier.Tests.EmailVerifierTests+WhenCreateAnEmailVerifier.MustValidEmailsOnlyWithRegexRule(email: &quot;a@b.com&quot;)" type="Trindade.EmailVerifier.Tests.EmailVerifierTests+WhenCreateAnEmailVerifier" method="MustValidEmailsOnlyWithRegexRule" time="0.4941863" result="Pass" />
+      <test name="Trindade.EmailVerifier.Tests.EmailVerifierTests+WhenCreateAnEmailVerifier.MustValidEmailsOnlyWithRegexRule(email: &quot;test@xpto.com.br&quot;)" type="Trindade.EmailVerifier.Tests.EmailVerifierTests+WhenCreateAnEmailVerifier" method="MustValidEmailsOnlyWithRegexRule" time="0.0000513" result="Pass" />
+      <test name="Trindade.EmailVerifier.Tests.EmailVerifierTests+WhenCreateAnEmailVerifier.MustValidEmailsOnlyWithRegexRule(email: &quot;paulofoliveira@outlook.com&quot;)" type="Trindade.EmailVerifier.Tests.EmailVerifierTests+WhenCreateAnEmailVerifier" method="MustValidEmailsOnlyWithRegexRule" time="0.0000261" result="Pass" />
+      <test name="Trindade.EmailVerifier.Tests.EmailVerifierTests+WhenCreateAnEmailVerifier.MustThrowRuleNotFoundExceptionTheExecuteWithoutRules(email: &quot;paulofoliveira@outlook.com&quot;)" type="Trindade.EmailVerifier.Tests.EmailVerifierTests+WhenCreateAnEmailVerifier" method="MustThrowRuleNotFoundExceptionTheExecuteWithoutRules" time="0.0019894" result="Pass" />
+    </collection>
+  </assembly>
+</assemblies>

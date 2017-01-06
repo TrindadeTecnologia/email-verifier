@@ -52,26 +52,26 @@ namespace Trindade.EmailVerifier.Tests
                 Assert.True(valid);
             }
 
-            [Theory]
-            [InlineData("a@uol.com.br")]
-            [InlineData("b@gmail.com")]
-            [InlineData("paulofoliveira@outlook.com")]
-            [InlineData("test@terra.com.br")]
-            [InlineData("xpto@ig.com.br")]
-            public void MustValidEmailsOnlyWithMxRule(string email)
-            {
-                // Arrange:
+            //[Theory]
+            //[InlineData("a@uol.com.br")]
+            //[InlineData("b@gmail.com")]
+            //[InlineData("paulofoliveira@outlook.com")]
+            //[InlineData("test@terra.com.br")]
+            //[InlineData("xpto@ig.com.br")]
+            //public void MustValidEmailsOnlyWithMxRule(string email)
+            //{
+            //    // Arrange:
 
-                _sut.AddRule(new MxRule());
+            //    _sut.AddRule(new MxRule());
 
-                // Act:
+            //    // Act:
 
-                var valid = _sut.IsValid(email);
+            //    var valid = _sut.IsValid(email);
 
-                // Assert:
+            //    // Assert:
 
-                Assert.Equal(true, valid);
-            }
+            //    Assert.Equal(true, valid);
+            //}
         }
     }
 }
