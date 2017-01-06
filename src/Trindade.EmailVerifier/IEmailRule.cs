@@ -6,6 +6,6 @@ namespace Trindade.EmailVerifier
     {
         bool IsValid(string email);
 
-        Task<bool> IsValidAsync1(string email);
+        Task<bool> IsValidAsync(string email);
     }
 }
