@@ -1,4 +1,4 @@
-# Trindade.EmailVerifier (xUnit)
+# Trindade.EmailVerifier - xUnit
 
 Verificador de e-mails criado para validar endereços de e-mail a partir de regras pré definidas.
 O projeto hoje conta com duas regras para validação:
