@@ -18,7 +18,7 @@ namespace Trindade.EmailVerifier.Tests
             //}
 
             [Theory]
-            [InlineData("paulofoliveira@outlook.com")]
+            [InlineData("paulofoliveiraoutlook.com")]
             public void MustThrowRuleNotFoundExceptionTheExecuteWithoutRules(string email)
             {
                 // Arrange:
