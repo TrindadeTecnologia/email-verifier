@@ -1,26 +1,25 @@
-﻿using NUnit.Framework;
+﻿//using NUnit.Framework;
 using System.Threading.Tasks;
 using Trindade.EmailVerifier.Rules;
 using Trindade.EmailVerifier.Services;
+using Xunit;
 
 namespace Trindade.EmailVerifier.Tests
 {
     public class EmailVerifierTests
     {
-
-        [TestFixture]
         public class WhenCreateAnEmailVerifier
         {
-            public EmailVerifier _sut;
+            public EmailVerifier _sut = new EmailVerifier();
 
-            [SetUp]
-            public void Init()
-            {
-                _sut = new EmailVerifier();
-            }
+            //[SetUp]
+            //public void Init()
+            //{
+            //    _sut = new EmailVerifier();
+            //}
 
-            [Test]
-            [TestCase("paulofoliveira@outlook.com")]
+            [Theory]
+            [InlineData("paulofoliveira@outlook.com")]
             public void MustThrowRuleNotFoundExceptionTheExecuteWithoutRules(string email)
             {
                 // Arrange:
@@ -31,14 +30,14 @@ namespace Trindade.EmailVerifier.Tests
 
                 // Assert:
 
-                Assert.IsInstanceOf<RuleNotFoundException>(ex);
-                Assert.AreEqual("Rules not found.", ex.Message);
+                //Assert.IsInstanceOf<RuleNotFoundException>(ex);
+                Assert.Equal("Rules not found.", ex.Message);
             }
 
-            [Test]
-            [TestCase("a@b.com")]
-            [TestCase("test@xpto.com.br")]
-            [TestCase("paulofoliveira@outlook.com")]
+            [Theory]
+            [InlineData("a@b.com")]
+            [InlineData("test@xpto.com.br")]
+            [InlineData("paulofoliveira@outlook.com")]
             public void MustValidEmailsOnlyWithRegexRule(string email)
             {
                 // Arrange:
@@ -51,14 +50,15 @@ namespace Trindade.EmailVerifier.Tests
 
                 // Assert:
 
-                Assert.AreEqual(true, valid);
+                Assert.True(valid);
             }
 
-            [TestCase("a@uol.com.br")]
-            [TestCase("b@gmail.com")]
-            [TestCase("paulofoliveira@outlook.com")]
-            [TestCase("test@terra.com.br")]
-            [TestCase("xpto@ig.com.br")]
+            [Theory]
+            [InlineData("a@uol.com.br")]
+            [InlineData("b@gmail.com")]
+            [InlineData("paulofoliveira@outlook.com")]
+            [InlineData("test@terra.com.br")]
+            [InlineData("xpto@ig.com.br")]
             public void MustValidEmailsOnlyWithMxRule(string email)
             {
                 // Arrange:
@@ -71,14 +71,14 @@ namespace Trindade.EmailVerifier.Tests
 
                 // Assert:
 
-                Assert.AreEqual(true, valid);
+                Assert.Equal(true, valid);
             }
 
-            [Test]
-            [TestCase("paulofoliveira@outlook.com")]
+            [Theory]
+            [InlineData("paulofoliveira@outlook.com")]
             public async Task MustValidEmailsOnlyWithMailboxLayer(string email)
             {
-                // Arrange:               
+                // Arrange:
 
                 _sut.AddRule(new MailboxLayerServiceRule("access key here"));
 
@@ -88,14 +88,14 @@ namespace Trindade.EmailVerifier.Tests
 
                 // Assert:
 
-                Assert.AreEqual(true, valid);
+                Assert.Equal(true, valid);
             }
 
-            [Test]
-            [TestCase("paulo.silva@trindadetecnologia.com.br")]
+            [Theory]
+            [InlineData("paulo.silva@trindadetecnologia.com.br")]
             public async Task MustValidEmailsOnlyWithEmailValidator(string email)
             {
-                // Arrange:               
+                // Arrange:
 
                 _sut.AddRule(new EmailValidatorServiceRule("access key here"));
 
@@ -105,9 +105,8 @@ namespace Trindade.EmailVerifier.Tests
 
                 // Assert:
 
-                Assert.AreEqual(true, valid);
+                Assert.Equal(true, valid);
             }
         }
-
     }
 }
