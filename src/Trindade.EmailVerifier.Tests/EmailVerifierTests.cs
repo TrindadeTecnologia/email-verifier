@@ -18,7 +18,8 @@ namespace Trindade.EmailVerifier.Tests
             //    _sut = new EmailVerifier();
             //}
 
-            [Fact]
+            [Theory]
+            [InlineData("a@b.com")]
             public void MustThrowRuleNotFoundExceptionTheExecuteWithoutRules(string email)
             {
                 // Arrange:
