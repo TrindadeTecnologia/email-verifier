@@ -11,7 +11,7 @@ Example:
 ```cs
 var emailVerifier = new EmailVerifier();
 
-// Adicionando regras default:
+// Adding default rules:
 emailVerifier.AddRule(new DefaultRule());
 emailVerifier.AddRule(new MxRule());
 emailVerifier.AddRule(new RegexRule("Your regex rule here"));
