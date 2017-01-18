@@ -22,4 +22,5 @@ bool result = emailVerifier.IsValid(emailToBeValidated);
 Console.WriteLine($"Result = { result }");
 
 ```
-You can create your custom rule inheriting IEmailRule class. You'll have to implement two methods. IsValid and IsValidAsync. Both, returns a boolean value that indicates if the informed address value is valid or not. Fdx
+You can create your custom rule inheriting IEmailRule class. You'll have to implement two methods. IsValid and IsValidAsync. Both, returns a boolean value that indicates if the informed address value is valid or not. Fdxa
+a
