@@ -54,7 +54,7 @@ namespace Trindade.EmailVerifier.Tests
 
             [TestCase("a@uol.com.br")]
             [TestCase("b@gmail.com")]
-            [TestCase("paulofoliveira@outlook.com")]
+            [TestCase("paulofoliveira@ig.com")]
             [TestCase("test@terra.com.br")]
             [TestCase("xpto@ig.com.br")]
             public void MustValidEmailsOnlyWithMxRule(string email)
