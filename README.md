@@ -12,13 +12,12 @@ Example:
 var emailVerifier = new EmailVerifier();
 
 // Adding default rules:
-emailVerifier.AddRule(new DefaultRule());
-emailVerifier.AddRule(new MxRule());
-emailVerifier.AddRule(new RegexRule("Your regex rule here"));
+emailVerifier.AddRule(DefaultRules.SintaxRule);
+emailVerifier.AddRule(DefaultRules.MxRule);
 
 string emailToBeValidated = "paulofoliveira@outlook.com";
 
-bool result = emailVerified.IsValid(emailToBeValidated);
+bool result = emailVerifier.IsValid(emailToBeValidated);
 
 Console.WriteLine($"Result = { result }");
 
