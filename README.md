@@ -1,4 +1,4 @@
-# Trindade.EmailVerifier
+# Trindade.EmailVerifier - xUnit
 
 Email verifier created to validate emails through configured rules. Today, the project has the following validations.
 
